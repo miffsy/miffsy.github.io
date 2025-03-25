@@ -1,3 +1,0 @@
-import annoying
-
-annoying.hello()
