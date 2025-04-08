@@ -57,7 +57,7 @@ for q in range(p-1):
             if o[r] > o[r + 1]:
                 o[r], o[r + 1] = o[r + 1], o[r]
 
-print("List k's powers: ",o)
+print("List k's powers (roughly): ",o)
 print("The largest power is:", (o[p-1]))
 print("\n")
 
@@ -74,6 +74,14 @@ print("\n")
 print("2.3:\n")
 
 w = [1, [2, [3, 4], [5]], 6]
+x = []
 print("List w to be flattened",w)
-print(str(w))
+def unnester(w):
+     for y in w:
+        if type(y) == list:
+            unnester(y)
+        else:
+            x.append(y)
+unnester(w)
+print("Flattened list: ",x)
 print("\n")

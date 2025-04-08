@@ -1,0 +1,73 @@
+#Intro
+#Menu system
+#Graphics system
+#Combat system
+#Collections:
+#Locales
+#Items - equippable/consumable
+#Obstacles/enemies
+#Stages (of progress) like STG001
+
+#Graphical "memory"
+#If my graphics are more than 1 pixel per entity, this could increase
+#the size of lists by 2-16x massively slowing things down
+#numpy for the array stuff to be faster?
+#MVC model means graphics are technically superficial
+#what size grid, then?
+#7 rows for the menu, 15 columns for selection, 21 for text area?
+#so 7x36 for lower part?
+#23x36 for upper?
+#30x36 = 1080 symbols.. Edit: NOPE
+#ensure no gaps between lines for presentation consistency
+#I had to expand this because I couldn't find a square font but it looks fine now
+#So we're looking at 28x69 = 1932 symbols
+#I hope this doesn't run like crap
+#It appears that the console uses monospace font which does simplify things
+#For reference: Functional space: 69x28 
+#For reference, useable space: 
+#Visuals box:67x20 #20 rows inside the border #66 because newline from join()
+#Dialogue box:38x5 #5 rows inside the border #38 because newline from join()
+#Menu box:27x5 #26 because of newline from join()
+#For visual purposes, useable space:
+#Visuals box:65x20
+#Dialogue box:35x3 #Might move text to the visuals box as "popups" to increase space, and use the text box for stats and such
+#Menu box:25x3 so perhaps up to 2 x 12 char strings
+
+#How fast can this stuff even run?
+# Perhaps store each row in a separate variable, list of lists?
+#Figure out how to manipulate all the data without OOP
+
+#character/enemy class system? yeesh maybe not yet, but it can be a variable with its own bonuses
+
+#crit system
+
+#Do I want dynamically updating text or just fresh output per "tick"?
+#Decimal module for float errors?
+
+#pandas?
+#collections?
+
+I want an elemental thing later..
+
+#battle system:
+#Loop: are enemies cleared or player dead yes/no
+#loop: attack turn
+#   loop: wait until turn complete
+#       loop:   if player wait until move selected:
+                menu selection:
+                    move selection:
+                        jab: base damage
+                        bludgeon: base damage, 20% boost, 3% crit take 10% of damage dealt #maybe stamina? #maybe only backlash if using a blunt weapon?
+                        special: base damage, +10% crit chance, +15% crit damage, 35% boost, 5% accuracy only once per day/revive
+                        back: nothing, go back
+                calculate damage
+                deal damage
+                pause for animation/damage text
+                switch turn
+# if player dead, revive in starting zone
+# if enemies clearedspoils calculated off damage dealt/damage taken/rounds
+#window 4 is needed
+#how do I make a window disappear?
+#
+
+so goddamn much left to do, I need to update this into a damn to-do list
